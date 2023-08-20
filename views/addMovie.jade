@@ -1,0 +1,20 @@
+extend layout
+
+block btn
+  button 
+    a(href='/') Home
+
+
+
+block content
+        
+    .addForm 
+        form(method="POST", action="/storeData")
+            p Movie Title :
+                input(type="text", name="title")
+            p Director Name :
+                input(type="text", name="actorName")
+            p Release Date :
+                input(type="Date", name="date")
+            p
+                input(type="submit", value="Submit") 

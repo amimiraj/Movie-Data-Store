@@ -1,0 +1,30 @@
+extend layout
+
+block btn
+  button 
+    a(href='/addMovie/') Add Movie
+
+block content
+  table
+    thead
+      tr 
+        th Id
+        th Movie Name 
+        th Director Name
+        th Release Date 		
+
+        th Action
+    tbody 
+       each post in record 
+        tr 
+          td #{post._id}
+          td #{post.title}
+          td #{post.actorName}
+          td #{post.releaseDate}
+
+          td 
+             a(href='/editMovie/'+post._id) Edit ||
+             a(href='/deleteMovie/'+post._id) Delete
+
+
+
